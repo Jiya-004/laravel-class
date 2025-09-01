@@ -1,0 +1,59 @@
+PS C:\Users\student3\example-app> php artisan tinker
+Psy Shell v0.12.10 (PHP 8.2.12 — cli) by Justin Hileman
+> use App\Models\User;
+> use App\Models\Post;
+> use App\Models\Post_tag;
+> $user = new User;
+= App\Models\User {#5245}
+
+> $user->name = 'abc';
+= "abc"
+
+> $user->name = 'abc@gmail.com';
+= "abc@gmail.com"
+
+> $user->email = 'abc@gmail.com';
+= "abc@gmail.com"
+
+> $user->password = 'bcrypt('1111)';
+
+   PARSE ERROR  PHP Parse error: Syntax error, unexpected T_LNUMBER in vendor\psy\psysh\src\Exception\ParseErrorException.php on line 44.
+
+> $user->password = 'bcrypt('1111');
+
+   PARSE ERROR  PHP Parse error: Syntax error, unexpected T_LNUMBER in vendor\psy\psysh\src\Exception\ParseErrorE
+
+> $user->password = bcrypt('1111');
+= "$2y$12$g.LJkyKy5iV43oI1081Q4.wnMK0c/4zl2GwSTxPmcrkUANEiyXzda"
+
+> $user->role = 'user';
+= "user"
+
+> $user->save();
+= true
+
+> exit;
+
+   INFO  Goodbye.
+
+$user = User::all();
+$user = User::find(5);
+$user = User::where('email','abc@gmail.com')->first();
+$user = User::where('email','abc@gmail.com')->get();
+foreach($user as $u){echo $u;}
+foreach($user as $u){echo $u->email;}
+php artisan make:migration profiles_table
+$user ->name ="abc_updated";
+$user = user::find(5);
+
+php artisan make:migration chirps
+ php artisan make:model Chirp
+
+ php artisan make:view layouts.app
+php artisan make:controller ChirpController
+php artisan make:model Chirp
+
+php artisan make:view chirps.index
+php artisan make:view layouts.app
+
+flow bite

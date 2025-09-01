@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+
+
  
 
 /*
@@ -18,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 // named parameter
 
@@ -97,3 +101,7 @@ Route::get('/', function () {
 //     Route::put('/post/{id}', 'update')->name('post.update');
 //     Route::delete('/post/{id}', 'destroy')->name('post.destroy');
 // });
+// Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+// Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+
+Route::get('/chirps',[ChirpController::class,'index'])->name('chirps.index');
